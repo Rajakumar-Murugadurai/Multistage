@@ -40,8 +40,8 @@ jobs:
       envUrl: "https://mona-dotnetweb-staging.azurewebsites.net/"
       slotName: "staging"
       artifactName: "monaWeb"
-    secrets:
-      azureWebAppPublishProfile: ${{ secrets.azureWebAppPublishProfile }}
+#     secrets:
+#       azureWebAppPublishProfile: ${{ secrets.azureWebAppPublishProfile }}
 
   prod:
     needs: staging
@@ -51,5 +51,5 @@ jobs:
       envUrl: "https://mona-dotnetweb.azurewebsites.net/"
       slotName: "production"
       artifactName: "monaWeb"
-    secrets:
-      azureWebAppPublishProfile: ${{ secrets.azureWebAppPublishProfile }}
+#     secrets:
+#       azureWebAppPublishProfile: ${{ secrets.azureWebAppPublishProfile }}
