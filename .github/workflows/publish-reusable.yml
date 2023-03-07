@@ -18,8 +18,8 @@ jobs:
       envName: "Staging"
       envUrl: "https://mona-dotnetweb-staging.azurewebsites.net/"
       slotName: "staging"
-    secrets:
-      azureWebAppPublishProfile: ${{ secrets.azureWebAppPublishProfile }}
+#     secrets:
+#       azureWebAppPublishProfile: ${{ secrets.azureWebAppPublishProfile }}
 
   prod:
     if: github.event.inputs.releaseType == 'prod'
@@ -29,6 +29,6 @@ jobs:
       envName: "Prod"
       envUrl: "https://mona-dotnetweb.azurewebsites.net/"
       slotName: "production"
-    secrets:
-      azureWebAppPublishProfile: ${{ secrets.azureWebAppPublishProfile }}
+#     secrets:
+#       azureWebAppPublishProfile: ${{ secrets.azureWebAppPublishProfile }}
     
