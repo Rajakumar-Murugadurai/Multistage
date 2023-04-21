@@ -1,0 +1,32 @@
+name: My Multi-Stage Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_test:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build application
+        run: |
+          # Build commands here
+      - name: Test application
+        run: |
+          # Test commands here
+  deploy:
+    runs-on: self-hosted
+    needs: build_and_test
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy application
+        run: |
+          # Deploy commands here
